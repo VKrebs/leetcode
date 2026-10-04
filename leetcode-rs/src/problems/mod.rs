@@ -1,0 +1,1 @@
+pub mod p1480_running_sum_of_1d_array;
