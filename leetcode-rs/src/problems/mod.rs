@@ -1,3 +1,4 @@
+pub mod p0383_ransom_note;
 pub mod p0412_fizz_buzz;
 pub mod p0876_middle_of_the_linked_list;
 pub mod p1342_number_of_steps_to_reduce_a_number_to_zero;
