@@ -1,4 +1,5 @@
 pub mod p0412_fizz_buzz;
+pub mod p0876_middle_of_the_linked_list;
 pub mod p1342_number_of_steps_to_reduce_a_number_to_zero;
 pub mod p1480_running_sum_of_1d_array;
 pub mod p1672_richest_customer_wealth;
