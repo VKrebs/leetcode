@@ -1,3 +1,4 @@
+pub mod p0001_two_sum;
 pub mod p0383_ransom_note;
 pub mod p0412_fizz_buzz;
 pub mod p0876_middle_of_the_linked_list;

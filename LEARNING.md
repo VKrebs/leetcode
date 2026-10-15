@@ -8,7 +8,7 @@ Backbone: the NeetCode 150 categories.
 
 | Pattern | Status | Problems |
 |---|---|---|
-| Arrays & Hashing | practising | 0383, 1480, 1672 |
+| Arrays & Hashing | practising | 0001, 0383, 1480, 1672 |
 | Two Pointers | practising | 0876 |
 | Sliding Window | not started | |
 | Stack | not started | |
@@ -31,6 +31,7 @@ Backbone: the NeetCode 150 categories.
 
 | # | Problem | Lang | Date | Status | Hints | Notes |
 |---|---|---|---|---|---|---|
+| 0001 | Two Sum | Rust | 2026-10-15 | solved | L2 | the inner loop searches for `target - x`; a value→index hash map makes that search O(1), so one pass gives O(n) time for O(n) space (check before insert so an element never pairs with itself) |
 | 0070 | Climbing Stairs | C# | 2026-10-06 | solved (independent) | - | no tutor data; four approaches from naive recursion to rolling window |
 | 0383 | Ransom Note | Rust | 2026-10-06 | solved (independent) | - | no tutor data; HashMap and fixed 26-array versions |
 | 0412 | Fizz Buzz | Rust | 2026-10-06 | solved (independent) | - | no tutor data |
@@ -51,7 +52,11 @@ _None yet._
 
 ### Rust
 
-_None yet._
+- Integer conversions: `From`/`into` for lossless widening, `T::try_from(x)` plus `.expect("why it can't fail")` for narrowing or sign changes; `as` only when wrapping or truncation is wanted (0001, 0412)
+- `HashMap::get` returns `Option<&V>`: `if let Some(&v) = map.get(&k)` looks up and copies in one step, instead of `contains_key` then indexing (0001)
+- Destructure references in loop patterns: `for (i, &x) in v.iter().enumerate()` yields owned `Copy` values (0001)
+- `#[expect(lint, reason = "...")]` over `#[allow]`: it warns when the suppression goes stale (0001)
+- `with_capacity(n)` on `HashMap`/`Vec` when the final size is known (0001, 0412)
 
 ### C#
 
