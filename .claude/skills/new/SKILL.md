@@ -12,7 +12,7 @@ Scaffold the problem so the learner can start solving. You write boilerplate onl
 1. **Fetch.** Run `node .claude/skills/new/fetch.mjs <id-or-slug>` from the repo root. If it fails or the problem is paid-only, ask the learner to paste the statement and signature, and continue from that.
 2. **Pick the language** from the second argument: `rs` (default) or `cs`. If the file already exists in that language, stop and say so; the learner may want a re-attempt in a new method instead.
 3. **Write the file** following the conventions in `CLAUDE.md`:
-   - Top comment: problem number, title, URL, difficulty, then the statement converted from HTML to plain text (examples and constraints included).
+   - Top comment: two lines only, `NNNN. Title` and the URL. No statement, examples or constraints; the learner reads those on LeetCode.
    - The starter signature from `snippets.rust` / `snippets.csharp`, with a body that compiles but fails tests: `todo!()` in Rust, `throw new NotImplementedException();` in C#.
    - Support types the signature needs (e.g. `ListNode`, `TreeNode`) and test helpers that only convert data (e.g. vec to list).
    - One test per LeetCode example, named `example1`, `example2`… (Rust) or a `[Theory]` with one `[InlineData]` per example (C#). Only the examples, no extra cases.
