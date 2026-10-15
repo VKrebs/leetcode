@@ -2,7 +2,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn fizz_buzz(n: i32) -> Vec<String> {
-        let mut answer = Vec::with_capacity(n as usize);
+        let mut answer = Vec::with_capacity(usize::try_from(n).expect("1 <= n <= 10^4 per constraints"));
 
         for i in 1..=n {
             let s = match (i % 3, i % 5) {
